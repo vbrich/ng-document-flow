@@ -1,0 +1,21 @@
+.top-card {
+  padding: 10px;
+  border-radius: 0;
+  background: #f4f5f4;
+  color: #3c64b1;
+  box-shadow: none;
+}
+
+.right {
+  float:right;
+  vertical-align: text-top;
+}
+
+.main {
+  padding: 20px;
+}
+
+.amount {
+  background: #CED8EB;
+  padding: 20px;
+}
