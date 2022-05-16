@@ -11,6 +11,7 @@ import { AppComponent, DialogContentComponent } from './app.component';
 
 import { TestComponent } from './test/test.component';
 import { Test2Component } from './test2/test2.component';
+import { ExamplesComponent } from './examples/examples.component';
 
 @NgModule({
   imports: [
@@ -21,6 +22,7 @@ import { Test2Component } from './test2/test2.component';
     RouterModule.forRoot([
       { path: '', component: TestComponent },
       { path: 'test2', component: Test2Component },
+      { path: 'examples', component: ExamplesComponent },
     ]),
   ],
   declarations: [
@@ -28,6 +30,7 @@ import { Test2Component } from './test2/test2.component';
     DialogContentComponent,
     TestComponent,
     Test2Component,
+    ExamplesComponent,
   ],
   entryComponents: [DialogContentComponent],
   bootstrap: [AppComponent],
