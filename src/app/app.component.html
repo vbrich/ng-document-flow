@@ -18,29 +18,26 @@
       </mat-toolbar-row>
 
       <mat-toolbar-row>
-        <div><a routerLink="/">Test</a></div>
+        <div><a routerLink="/examples">Example Widgets</a></div>
       </mat-toolbar-row>
 
       <mat-toolbar-row>
-        <div><a routerLink="/test2">Test2</a></div>
-      </mat-toolbar-row>
-
-      <mat-toolbar-row>
-        <div><a routerLink="/examples">Examples</a></div>
+        <div><a routerLink="/">Closing Ceremony</a></div>
       </mat-toolbar-row>
     </mat-toolbar>
   </mat-sidenav>
 
-  <mat-toolbar color="warning">
+  <mat-toolbar>
     <button mat-button class="app-menu-button" (click)="sidenav.toggle()">
       <i class="material-icons">menu</i>
     </button>
     <!--<span class="app-toolbar-pad"></span>-->
-    <span class="title">BANK LOGO</span>    
+    <!--<span class="title">BANK LOGO</span>-->
+    <div class="logo">BANK LOGO</div>
     <span class="app-toolbar-filler"></span>
     <span>
       <mat-icon>perm_identity</mat-icon>
-    </span>    
+    </span>
   </mat-toolbar>
 
   <div class="app-content">

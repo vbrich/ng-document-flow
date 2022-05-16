@@ -2,6 +2,14 @@ mat-sidenav-container.m2app-dark {
   background: black;
 }
 
+div.logo {
+  //width: 70px;
+  //border: 1px solid #000000;
+  //white-space: normal;
+  //word-wrap: break-word;
+  color: #486eb6;
+}
+
 .app-content {
   padding: 5px;
 }
@@ -52,7 +60,7 @@ mat-sidenav-container.m2app-dark {
 }
 
 .app-list {
-  border: 1px solid rgba(0,0,0,0.12);
+  border: 1px solid rgba(0, 0, 0, 0.12);
 }
 
 .app-progress {
@@ -61,7 +69,7 @@ mat-sidenav-container.m2app-dark {
 
 .example-h2 {
   margin: 10px 0;
-  color: rgba(0,0,0,.54);
+  color: rgba(0, 0, 0, 0.54);
 }
 
 .example-section {
@@ -94,4 +102,3 @@ mat-chip {
 .example-spacer {
   flex: 1 1 auto;
 }
-

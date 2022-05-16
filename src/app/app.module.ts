@@ -9,9 +9,8 @@ import { RouterModule } from '@angular/router';
 import { AppMaterialModule } from './app.material.module';
 import { AppComponent, DialogContentComponent } from './app.component';
 
-import { TestComponent } from './test/test.component';
-import { Test2Component } from './test2/test2.component';
 import { ExamplesComponent } from './examples/examples.component';
+import { ClosingCeremonyComponent } from './closing-ceremony/closing-ceremony.component';
 
 @NgModule({
   imports: [
@@ -20,17 +19,15 @@ import { ExamplesComponent } from './examples/examples.component';
     AppMaterialModule,
     BrowserAnimationsModule,
     RouterModule.forRoot([
-      { path: '', component: TestComponent },
-      { path: 'test2', component: Test2Component },
+      { path: '', component: ClosingCeremonyComponent },
       { path: 'examples', component: ExamplesComponent },
     ]),
   ],
   declarations: [
     AppComponent,
     DialogContentComponent,
-    TestComponent,
-    Test2Component,
     ExamplesComponent,
+    ClosingCeremonyComponent,
   ],
   entryComponents: [DialogContentComponent],
   bootstrap: [AppComponent],
