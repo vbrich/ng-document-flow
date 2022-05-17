@@ -45,6 +45,16 @@ export class ClosingCeremony2Component implements OnInit {
     else { const myTempDialog = this.dialog.open(this.dialogRef99, {}); }    
   }
 
+  openDoc(num) {    
+    console.log('openDoc() was hit with num = ' + num);
+    if (num == 1) { window.open('/assets/html/creditscoresummary.html', '_blank') } 
+    else if (num == 2) { window.open('/assets/html/creditscoresummary.html', '_blank') }
+    else if (num == 3) { window.open('/assets/html/odometer.html', '_blank') }
+    else { 
+      console.log('invalid number passed into openDoc()');
+    }    
+  }
+
   constructor(public dialog: MatDialog) {
   }
 
