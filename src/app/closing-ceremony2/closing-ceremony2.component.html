@@ -13,25 +13,6 @@
   <h2>Here are your contracts to review, James</h2>
   <b>The next step is signing, so lets first review</b><br /><br />
 
-
-
-
-  <!-- PLAYING WITH DIALOG/MODALS -->
-  <button mat-button (click)="openTempDialog()">Open Temp Modal</button>
-  <ng-template #dialogRef let-mydata>
-    <h5>Hi I am Template Dialog following Foo list:</h5>
-    <ul *ngIf="mydata">
-      <li *ngFor="let item of mydata">{{item}}</li>
-    </ul>
-    <button mat-button mat-dialog-close="I am from dialog land...">Close</button>
-  </ng-template>
-
-
-
-
-
-
-
 <!-- ********************** DOCUMENT PREVIEW *************************** -->
   <br /><br />
   <table mat-table [dataSource]="document1" class="mat-elevation-z0">
@@ -48,17 +29,26 @@
     <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
   </table>
   <div class="quick-view">
-  <hr style="border-top: 1px solid #3C64B1;" />
+  <hr style="border-top: 1px solid #F8F9F9;" />
   <div class="grid-container">
     <div class="grid-item1">
-      Overview
+      <button mat-button color="primary" (click)="openTempDialog(1)">Overview</button>
+      <ng-template #dialogRef1>
+        <h5>What is the Federal Truth in Lending Disclosure?</h5>
+        <p>The Truth in Lending Act (aka TILA) is focused on protecting the borrower. The borrower must receive disclosures about important terms of credit before they are legally bound to pay the loan.</p>
+        <button mat-button mat-dialog-close="dialog response...">Close</button>
+      </ng-template>      
     </div>
     <div class="grid-item2"></div>
     <div class="grid-item3">
-      Review
+      <button mat-button color="primary" (click)="openTempDialog(99)">Review</button>
+      <ng-template #dialogRef99>
+        <h5>TBD PREVIEW</h5>
+        <button mat-button mat-dialog-close="dialog response...">Close</button>
+      </ng-template>  
     </div>
   </div>
-  <hr style="border-top: 1px solid #3C64B1;" />
+  <hr style="border-top: 1px solid #F8F9F9;" />
   </div>
 
   <!-- ********************** DOCUMENT PREVIEW *************************** -->
@@ -77,13 +67,26 @@
     <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
   </table>
   <div class="quick-view">
-  <hr style="border-top: 1px solid #3C64B1;" />
+  <hr style="border-top: 1px solid #F8F9F9;" />
   <div class="grid-container">
-    <div class="grid-item1">Overview</div>
-    <div class="grid-item2">|</div>
-    <div class="grid-item3">Review</div>
+    <div class="grid-item1">
+      <button mat-button color="primary" (click)="openTempDialog(2)">Overview</button>
+      <ng-template #dialogRef2>
+      <h5>What is the Credit Score Summary?</h5>
+      <p>This is known as a risk-based pricing notice. ...</p>
+      <button mat-button mat-dialog-close="dialog response...">Close</button>
+      </ng-template>
+    </div>
+    <div class="grid-item2"></div>
+    <div class="grid-item3">
+      <button mat-button color="primary" (click)="openTempDialog(99)">Review</button>
+      <ng-template #dialogRef99>
+        <h5>TBD PREVIEW</h5>
+        <button mat-button mat-dialog-close="dialog response...">Close</button>
+      </ng-template>  
+    </div>
   </div>
-  <hr style="border-top: 1px solid #3C64B1;" />
+  <hr style="border-top: 1px solid #F8F9F9;" />
   </div>
 
   <!-- ********************** DOCUMENT PREVIEW *************************** -->
@@ -102,13 +105,26 @@
     <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
   </table>
   <div class="quick-view">
-  <hr style="border-top: 1px solid #3C64B1;" />
+  <hr style="border-top: 1px solid #F8F9F9;" />
   <div class="grid-container">
-    <div class="grid-item1">Overview</div>
-    <div class="grid-item2">|</div>
-    <div class="grid-item3">Review</div>
+    <div class="grid-item1">
+      <button mat-button color="primary" (click)="openTempDialog(3)">Overview</button>
+      <ng-template #dialogRef3>
+        <h5>What is the Odometer Statement?</h5>
+        <p>An Odometer Disclosure Statement is a legally binding document that provides an accurate mileage on the odometer at the time the car changes hands from the seller to the purchaser. And if the mileage is known to be incorrect, it must be indicated on the statement.</p>
+        <button mat-button mat-dialog-close="dialog response...">Close</button>
+      </ng-template>
+    </div>
+    <div class="grid-item2"></div>
+    <div class="grid-item3">
+      <button mat-button color="primary" (click)="openTempDialog(99)">Review</button>
+      <ng-template #dialogRef99>
+        <h5>TBD PREVIEW</h5>
+        <button mat-button mat-dialog-close="dialog response...">Close</button>
+      </ng-template>  
+    </div>
   </div>
-  <hr style="border-top: 1px solid #3C64B1;" />
+  <hr style="border-top: 1px solid #F8F9F9;" />
   </div>
 
   <!-- BUTTONS -->

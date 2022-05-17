@@ -8,7 +8,7 @@ export interface Document {
 }
 
 const DOCUMENT1: Document[] = [
-  {id: 1, name: 'Federal Truth in Lending Disclosure', desc: '4 Signatures 12 Pages'}
+  {id: 1, name: 'Federal Truth in Lending', desc: '4 Signatures 12 Pages'}
 ];
 const DOCUMENT2: Document[] = [
   {id: 2, name: 'Credit Score Summary', desc: '0 Signatures 1 Page'}
@@ -28,24 +28,26 @@ export class ClosingCeremony2Component implements OnInit {
   document2 = DOCUMENT2;
   document3 = DOCUMENT3;
 
-  //DIALOG
-  title = 'angular-material-dialog-app';
-  @ViewChild('dialogRef')
-  dialogRef!: TemplateRef<any>;
-  myFooList = ['Some Item', 'Item Second', 'Other In Row', 'What to write', 'Blah To Do']
+  //DIALOG - yes, just ghetto hacking this thing
+  @ViewChild('dialogRef1')
+  dialogRef1!: TemplateRef<any>;
+  @ViewChild('dialogRef2')
+  dialogRef2!: TemplateRef<any>;
+  @ViewChild('dialogRef3')
+  dialogRef3!: TemplateRef<any>;
+  @ViewChild('dialogRef99')
+  dialogRef99!: TemplateRef<any>;
+
+  openTempDialog(num) {    
+    if (num == 1) { const myTempDialog = this.dialog.open(this.dialogRef1, {}); } 
+    else if (num == 2) {const myTempDialog = this.dialog.open(this.dialogRef2, {});}
+    else if (num == 3) {const myTempDialog = this.dialog.open(this.dialogRef3, {});}
+    else { const myTempDialog = this.dialog.open(this.dialogRef99, {}); }    
+  }
 
   constructor(public dialog: MatDialog) {
   }
 
-  openTempDialog() {
-    const myTempDialog = this.dialog.open(this.dialogRef, { data: this.myFooList });
-    myTempDialog.afterClosed().subscribe((res) => {
-      // Data back from dialog
-      console.log({ res });
-    });
-  }
-
   ngOnInit() {
   }
-
 }
