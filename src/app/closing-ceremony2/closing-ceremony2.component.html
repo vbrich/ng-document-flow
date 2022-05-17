@@ -9,142 +9,157 @@
 
 <mat-card class="body-card">
 <mat-card-content>
-  <div class="maind">
+  <div class="main">
   <h2>Here are your contracts to review, James</h2>
-  <b>The next step is signing, so lets first review</b><br /><br />
+  <b>The next step is signing, so lets first review</b><br /><br /><br />
 
 <!-- ********************** DOCUMENT PREVIEW *************************** -->
-  <br /><br />
-  <table mat-table [dataSource]="document1" class="mat-elevation-z0">
-    <!-- First Column -->
-    <ng-container matColumnDef="id">
-      <td mat-cell *matCellDef="let element">
-        <mat-icon class="example-icon">edit_note</mat-icon>
-      </td>
-    </ng-container>
-    <!-- Second Column -->
-    <ng-container matColumnDef="name">
-      <td mat-cell *matCellDef="let element"> <b>{{element.name}}</b><br />{{element.desc}}</td>
-    </ng-container>
-    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-  </table>
-  <div class="quick-view">
-  <hr style="border-top: 1px solid #F8F9F9;" />
-  <div class="grid-container">
-    <div class="grid-item1">
-      <button mat-button color="primary" (click)="openTempDialog(1)">Overview</button>
-      <ng-template #dialogRef1>
-        <h5>What is the Federal Truth in Lending Disclosure?</h5>
-        <p>The Truth in Lending Act (aka TILA) is focused on protecting the borrower. The borrower must receive disclosures about important terms of credit before they are legally bound to pay the loan.</p>
-        <button mat-button mat-dialog-close="dialog response...">Close</button>
-      </ng-template>      
-    </div>
-    <div class="grid-item2"></div>
-    <div class="grid-item3">
-      <button mat-button color="primary" (click)="openTempDialog(99)">Review</button>
-      <ng-template #dialogRef99>
-        <h5>TBD PREVIEW</h5>
-        <button mat-button mat-dialog-close="dialog response...">Close</button>
-      </ng-template>  
-    </div>
+  <div class="docs">
+    <br /><br />
+    <table mat-table [dataSource]="document1" class="mat-elevation-z0">
+      <!-- First Column -->
+      <ng-container matColumnDef="id">
+        <td mat-cell *matCellDef="let element">
+          <mat-icon class="example-icon">edit_note</mat-icon>
+        </td>
+      </ng-container>
+      <!-- Second Column -->
+      <ng-container matColumnDef="name">
+        <td mat-cell *matCellDef="let element"> <b>{{element.name}}</b><br />{{element.desc}}</td>
+      </ng-container>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
   </div>
-  <hr style="border-top: 1px solid #F8F9F9;" />
+
+  <div class="docs">
+    <div class="quick-view">
+    <hr style="border-top: 1px solid #F8F9F9;" />
+    <div class="grid-container">
+      <div class="grid-item1">
+        <button mat-button color="primary" (click)="openTempDialog(1)">Overview</button>
+        <ng-template #dialogRef1>
+          <h5>What is the Federal Truth in Lending Disclosure?</h5>
+          <p>The Truth in Lending Act (aka TILA) is focused on protecting the borrower. The borrower must receive disclosures about important terms of credit before they are legally bound to pay the loan.</p>
+          <button mat-button mat-dialog-close="dialog response...">Close</button>
+        </ng-template>      
+      </div>
+      <div class="grid-item2"></div>
+      <div class="grid-item3">
+        <button mat-button color="primary" (click)="openTempDialog(99)">Review</button>
+        <ng-template #dialogRef99>
+          <h5>TBD PREVIEW</h5>
+          <button mat-button mat-dialog-close="dialog response...">Close</button>
+        </ng-template>  
+      </div>
+    </div>
+    <hr style="border-top: 1px solid #F8F9F9;" />
+    </div>
   </div>
 
   <!-- ********************** DOCUMENT PREVIEW *************************** -->
   <br /><br />
-  <table mat-table [dataSource]="document2" class="mat-elevation-z0">
-    <!-- First Column -->
-    <ng-container matColumnDef="id">
-      <td mat-cell *matCellDef="let element">
-        <mat-icon class="example-icon">edit_note</mat-icon>
-      </td>
-    </ng-container>
-    <!-- Second Column -->
-    <ng-container matColumnDef="name">
-      <td mat-cell *matCellDef="let element"> <b>{{element.name}}</b><br />{{element.desc}}</td>
-    </ng-container>
-    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-  </table>
-  <div class="quick-view">
-  <hr style="border-top: 1px solid #F8F9F9;" />
-  <div class="grid-container">
-    <div class="grid-item1">
-      <button mat-button color="primary" (click)="openTempDialog(2)">Overview</button>
-      <ng-template #dialogRef2>
-      <h5>What is the Credit Score Summary?</h5>
-      <p>This is known as a risk-based pricing notice. ...</p>
-      <button mat-button mat-dialog-close="dialog response...">Close</button>
-      </ng-template>
-    </div>
-    <div class="grid-item2"></div>
-    <div class="grid-item3">
-      <button mat-button color="primary" (click)="openTempDialog(99)">Review</button>
-      <ng-template #dialogRef99>
-        <h5>TBD PREVIEW</h5>
-        <button mat-button mat-dialog-close="dialog response...">Close</button>
-      </ng-template>  
-    </div>
+  <div class="docs">
+    <table mat-table [dataSource]="document2" class="mat-elevation-z0">
+      <!-- First Column -->
+      <ng-container matColumnDef="id">
+        <td mat-cell *matCellDef="let element">
+          <mat-icon class="example-icon">edit_note</mat-icon>
+        </td>
+      </ng-container>
+      <!-- Second Column -->
+      <ng-container matColumnDef="name">
+        <td mat-cell *matCellDef="let element"> <b>{{element.name}}</b><br />{{element.desc}}</td>
+      </ng-container>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
   </div>
-  <hr style="border-top: 1px solid #F8F9F9;" />
+  <div class="docs">
+    <div class="quick-view">
+    <hr style="border-top: 1px solid #F8F9F9;" />
+    <div class="grid-container">
+      <div class="grid-item1">
+        <button mat-button color="primary" (click)="openTempDialog(2)">Overview</button>
+        <ng-template #dialogRef2>
+        <h5>What is the Credit Score Summary?</h5>
+        <p>This is known as a risk-based pricing notice. ...</p>
+        <button mat-button mat-dialog-close="dialog response...">Close</button>
+        </ng-template>
+      </div>
+      <div class="grid-item2"></div>
+      <div class="grid-item3">
+        <button mat-button color="primary" (click)="openTempDialog(99)">Review</button>
+        <ng-template #dialogRef99>
+          <h5>TBD PREVIEW</h5>
+          <button mat-button mat-dialog-close="dialog response...">Close</button>
+        </ng-template>  
+      </div>
+    </div>
+    <hr style="border-top: 1px solid #F8F9F9;" />
+    </div>
   </div>
 
   <!-- ********************** DOCUMENT PREVIEW *************************** -->
   <br /><br />
-  <table mat-table [dataSource]="document3" class="mat-elevation-z0">
-    <!-- First Column -->
-    <ng-container matColumnDef="id">
-      <td mat-cell *matCellDef="let element">
-        <mat-icon class="example-icon">edit_note</mat-icon>
-      </td>
-    </ng-container>
-    <!-- Second Column -->
-    <ng-container matColumnDef="name">
-      <td mat-cell *matCellDef="let element"> <b>{{element.name}}</b><br />{{element.desc}}</td>
-    </ng-container>
-    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-  </table>
-  <div class="quick-view">
-  <hr style="border-top: 1px solid #F8F9F9;" />
-  <div class="grid-container">
-    <div class="grid-item1">
-      <button mat-button color="primary" (click)="openTempDialog(3)">Overview</button>
-      <ng-template #dialogRef3>
-        <h5>What is the Odometer Statement?</h5>
-        <p>An Odometer Disclosure Statement is a legally binding document that provides an accurate mileage on the odometer at the time the car changes hands from the seller to the purchaser. And if the mileage is known to be incorrect, it must be indicated on the statement.</p>
-        <button mat-button mat-dialog-close="dialog response...">Close</button>
-      </ng-template>
-    </div>
-    <div class="grid-item2"></div>
-    <div class="grid-item3">
-      <button mat-button color="primary" (click)="openTempDialog(99)">Review</button>
-      <ng-template #dialogRef99>
-        <h5>TBD PREVIEW</h5>
-        <button mat-button mat-dialog-close="dialog response...">Close</button>
-      </ng-template>  
-    </div>
+  <div class="docs">
+    <table mat-table [dataSource]="document3" class="mat-elevation-z0">
+      <!-- First Column -->
+      <ng-container matColumnDef="id">
+        <td mat-cell *matCellDef="let element">
+          <mat-icon class="example-icon">edit_note</mat-icon>
+        </td>
+      </ng-container>
+      <!-- Second Column -->
+      <ng-container matColumnDef="name">
+        <td mat-cell *matCellDef="let element"> <b>{{element.name}}</b><br />{{element.desc}}</td>
+      </ng-container>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
   </div>
-  <hr style="border-top: 1px solid #F8F9F9;" />
+  <div class="docs">  
+    <div class="quick-view">
+    <hr style="border-top: 1px solid #F8F9F9;" />
+    <div class="grid-container">
+      <div class="grid-item1">
+        <button mat-button color="primary" (click)="openTempDialog(3)">Overview</button>
+        <ng-template #dialogRef3>
+          <h5>What is the Odometer Statement?</h5>
+          <p>An Odometer Disclosure Statement is a legally binding document that provides an accurate mileage on the odometer at the time the car changes hands from the seller to the purchaser. And if the mileage is known to be incorrect, it must be indicated on the statement.</p>
+          <button mat-button mat-dialog-close="dialog response...">Close</button>
+        </ng-template>
+      </div>
+      <div class="grid-item2"></div>
+      <div class="grid-item3">
+        <button mat-button color="primary" (click)="openTempDialog(99)">Review</button>
+        <ng-template #dialogRef99>
+          <h5>TBD PREVIEW</h5>
+          <button mat-button mat-dialog-close="dialog response...">Close</button>
+        </ng-template>  
+      </div>
+    </div>
+    <hr style="border-top: 1px solid #F8F9F9;" />
+    </div>
   </div>
 
   <!-- BUTTONS -->
   <br /><br />
-  <div style="text-align: center">
-    <button 
-    mat-button
-    class="app-button" 
-    mat-raised-button color="primary" 
-    [routerLink]="['/']">
-      Back
-    </button>
+  <div class="docs">
+    <div style="text-align: center">
+      <button 
+      mat-button
+      class="app-button" 
+      mat-raised-button color="primary" 
+      [routerLink]="['/']">
+        Back
+      </button>
 
-    <button 
-    mat-button
-    class="app-button" 
-    mat-raised-button color="primary" 
-    [routerLink]="['/closing3']">
-      Sign
-    </button>
+      <button 
+      mat-button
+      class="app-button" 
+      mat-raised-button color="primary" 
+      [routerLink]="['/closing3']">
+        Sign
+      </button>
+    </div>
   </div>
 
 </div>
