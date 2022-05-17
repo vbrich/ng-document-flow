@@ -10,12 +10,31 @@
 <mat-card class="body-card">
 <mat-card-content>
   <div class="maind">
-  <h2>Here are your new car contracts to review, James</h2>
-  <b>Contracts to sign online</b><br /><br />
+  <h2>Here are your contracts to review, James</h2>
+  <b>The next step is signing, so lets first review</b><br /><br />
+
+
+
+
+  <!-- PLAYING WITH DIALOG/MODALS -->
+  <button mat-button (click)="openTempDialog()">Open Temp Modal</button>
+  <ng-template #dialogRef let-mydata>
+    <h5>Hi I am Template Dialog following Foo list:</h5>
+    <ul *ngIf="mydata">
+      <li *ngFor="let item of mydata">{{item}}</li>
+    </ul>
+    <button mat-button mat-dialog-close="I am from dialog land...">Close</button>
+  </ng-template>
+
+
+
+
+
+
 
 <!-- ********************** DOCUMENT PREVIEW *************************** -->
   <br /><br />
-  <table mat-table [dataSource]="dataSource" class="mat-elevation-z0">
+  <table mat-table [dataSource]="document1" class="mat-elevation-z0">
     <!-- First Column -->
     <ng-container matColumnDef="id">
       <td mat-cell *matCellDef="let element">
@@ -31,16 +50,20 @@
   <div class="quick-view">
   <hr style="border-top: 1px solid #3C64B1;" />
   <div class="grid-container">
-    <div class="grid-item1">Overview</div>
-    <div class="grid-item2">|</div>
-    <div class="grid-item3">Preview</div>
+    <div class="grid-item1">
+      Overview
+    </div>
+    <div class="grid-item2"></div>
+    <div class="grid-item3">
+      Review
+    </div>
   </div>
   <hr style="border-top: 1px solid #3C64B1;" />
   </div>
 
   <!-- ********************** DOCUMENT PREVIEW *************************** -->
   <br /><br />
-  <table mat-table [dataSource]="dataSource" class="mat-elevation-z0">
+  <table mat-table [dataSource]="document2" class="mat-elevation-z0">
     <!-- First Column -->
     <ng-container matColumnDef="id">
       <td mat-cell *matCellDef="let element">
@@ -58,14 +81,14 @@
   <div class="grid-container">
     <div class="grid-item1">Overview</div>
     <div class="grid-item2">|</div>
-    <div class="grid-item3">Preview</div>
+    <div class="grid-item3">Review</div>
   </div>
   <hr style="border-top: 1px solid #3C64B1;" />
   </div>
 
   <!-- ********************** DOCUMENT PREVIEW *************************** -->
   <br /><br />
-  <table mat-table [dataSource]="dataSource" class="mat-elevation-z0">
+  <table mat-table [dataSource]="document3" class="mat-elevation-z0">
     <!-- First Column -->
     <ng-container matColumnDef="id">
       <td mat-cell *matCellDef="let element">
@@ -83,7 +106,7 @@
   <div class="grid-container">
     <div class="grid-item1">Overview</div>
     <div class="grid-item2">|</div>
-    <div class="grid-item3">Preview</div>
+    <div class="grid-item3">Review</div>
   </div>
   <hr style="border-top: 1px solid #3C64B1;" />
   </div>
