@@ -13,6 +13,7 @@ import { ExamplesComponent } from './examples/examples.component';
 import { ClosingCeremonyComponent } from './closing-ceremony/closing-ceremony.component';
 import { ClosingCeremony2Component } from './closing-ceremony2/closing-ceremony2.component';
 import { ClosingCeremony3Component } from './closing-ceremony3/closing-ceremony3.component';
+import { DialogContentExampleDialog, DialogContentDocument1 } from './closing-ceremony2/closing-ceremony2.component';
 
 @NgModule({
   imports: [
@@ -34,8 +35,10 @@ import { ClosingCeremony3Component } from './closing-ceremony3/closing-ceremony3
     ClosingCeremonyComponent,
     ClosingCeremony2Component,
     ClosingCeremony3Component,
+    DialogContentExampleDialog,
+    DialogContentDocument1
   ],
-  entryComponents: [DialogContentComponent],
+  entryComponents: [DialogContentComponent, DialogContentExampleDialog, DialogContentDocument1],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

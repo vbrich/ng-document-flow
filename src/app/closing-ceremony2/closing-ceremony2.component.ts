@@ -38,11 +38,19 @@ export class ClosingCeremony2Component implements OnInit {
   @ViewChild('dialogRef99')
   dialogRef99!: TemplateRef<any>;
 
+  @ViewChild('docDialogRef1')
+  docDialogRef1!: TemplateRef<any>;
+
   openOverviewDialog(num) {    
     if (num == 1) { const myOverviewDialog = this.dialog.open(this.dialogRef1, {}); } 
     else if (num == 2) {const myOverviewDialog = this.dialog.open(this.dialogRef2, {});}
     else if (num == 3) {const myOverviewDialog = this.dialog.open(this.dialogRef3, {});}
     else { const myOverviewDialog = this.dialog.open(this.dialogRef99, {}); }    
+  }
+
+  openDocDialog(num) {
+    if (num == 2) { const dialogRef = this.dialog.open(DialogContentDocument1); }
+    else { const dialogRef = this.dialog.open(DialogContentExampleDialog); }
   }
 
   openDoc(num) {    
@@ -61,3 +69,15 @@ export class ClosingCeremony2Component implements OnInit {
   ngOnInit() {
   }
 }
+
+@Component({
+  selector: 'dialog-content-example-dialog',
+  templateUrl: 'dialog-content-example-dialog.html',
+})
+export class DialogContentExampleDialog {}
+
+@Component({
+  selector: 'dialog-content-document-1',
+  templateUrl: 'dialog-content-document-1.html',
+})
+export class DialogContentDocument1 {}

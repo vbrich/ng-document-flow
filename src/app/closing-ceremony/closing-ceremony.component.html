@@ -1,6 +1,8 @@
 <mat-card class="top-card">  
-    <span><mat-icon class="example-icon">keyboard_arrow_left</mat-icon></span>
+  <div class="left">
+    <mat-icon class="example-icon">keyboard_arrow_left</mat-icon>
     <span>Back</span>  
+  </div>
   <div class="right">
     <mat-icon class="example-icon">edit_note</mat-icon>
     <span>My Deal</span>
@@ -41,17 +43,22 @@
       ...<br />
 
       <br /><br />
-      <div style="text-align: center">
+
+      <div class="container">
+      <div class="center">
         <button
-          mat-button
-          class="app-button"
-          mat-raised-button
-          color="primary"
-          [routerLink]="['/closing2']"
-        >
-          Preview Contracts
-        </button>
+        mat-button
+        class="app-button"
+        mat-raised-button
+        color="primary"
+        [routerLink]="['/closing2']"
+      >
+        Preview Contracts
+      </button>
       </div>
+    </div>
+
+
     </div>
     <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
     <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />

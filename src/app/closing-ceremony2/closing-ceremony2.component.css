@@ -6,6 +6,10 @@
   border-bottom: 1px solid lightgray;
   color: #3c64b1;
   box-shadow: none;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .body-card {
@@ -14,27 +18,38 @@
   box-shadow: none;
 }
 
+.left {
+  float: right;
+  vertical-align: text-top;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
 .right {
   float: right;
   vertical-align: text-top;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 .main {
   padding: 20px;
- }
+}
 
- .docs {
+.docs {
   justify-content: center;
   align-items: center;
-  max-width: 400px;
- }
+  max-width: 450px;
+}
 
 .app-button {
-  padding:0.2em 2em;
+  padding: 0.2em 2em;
   border-radius: 8px;
-  border:0;
-  cursor:pointer;
-  margin:1em;
+  border: 0;
+  cursor: pointer;
+  margin: 1em;
 }
 
 .quick-view {
@@ -72,9 +87,9 @@ table {
 }
 
 /* Remove table border entirely */
-td.mat-cell{
+td.mat-cell {
   border-bottom-style: none;
 }
-th.mat-header-cell{
+th.mat-header-cell {
   border-bottom-style: none;
 }

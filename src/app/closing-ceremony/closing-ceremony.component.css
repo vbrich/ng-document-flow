@@ -9,6 +9,23 @@
   display: flex;
   align-items: center;
   flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+/*stupid centered button*/
+.container {
+  height: 75px;
+  max-width: 350px;
+  position: relative;
+  border: 0px solid black;
+}
+.center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
 
 .body-card {
@@ -18,11 +35,11 @@
 }
 
 .left {
-    float: right;
-    vertical-align: text-top;
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
+  float: right;
+  vertical-align: text-top;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 .right {
