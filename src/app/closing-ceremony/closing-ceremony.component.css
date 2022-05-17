@@ -1,13 +1,21 @@
 .top-card {
   padding: 10px;
   border-radius: 0;
-  background: #f4f5f4;
+  /*background: #f4f5f4;*/
+  border-top: 1px solid lightgray;
+  border-bottom: 1px solid lightgray;
   color: #3c64b1;
   box-shadow: none;
 }
 
+.body-card {
+  padding: 10px;
+  border-radius: 0;
+  box-shadow: none;
+}
+
 .right {
-  float:right;
+  float: right;
   vertical-align: text-top;
 }
 
@@ -15,7 +23,37 @@
   padding: 20px;
 }
 
-.amount {
-  background: #CED8EB;
-  padding: 20px;
+.amount-block {
+  background: #ced8eb;
+  color: #3c64b1;
+  padding: 10px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  padding: 0px;
+}
+
+.grid-item1 {
+  padding: 0px;
+  color: #3c64b1;
+  text-align: center;
+}
+
+.grid-item2 {
+  padding: 0px;
+  color: #3c64b1;
+  text-align: center;
+}
+
+.grid-item3 {
+  padding: 0px;
+  color: #3c64b1;
+  text-align: center;
+}
+
+.example-h2 {
+  margin: 10px 0;
+  color: rgba(0,0,0,.54);
 }
