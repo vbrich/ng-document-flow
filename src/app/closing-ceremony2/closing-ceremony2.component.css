@@ -39,7 +39,7 @@
 
 .grid-container {
   display: grid;
-  grid-template-columns: auto;
+  grid-template-columns: auto auto auto;
   padding: 0px;
 }
 
@@ -63,4 +63,12 @@
 
 table {
   width: 100%;
+}
+
+/* Remove table border entirely */
+td.mat-cell{
+  border-bottom-style: none;
+}
+th.mat-header-cell{
+  border-bottom-style: none;
 }
