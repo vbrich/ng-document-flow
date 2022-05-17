@@ -11,6 +11,8 @@ import { AppComponent, DialogContentComponent } from './app.component';
 
 import { ExamplesComponent } from './examples/examples.component';
 import { ClosingCeremonyComponent } from './closing-ceremony/closing-ceremony.component';
+import { ClosingCeremony2Component } from './closing-ceremony2/closing-ceremony2.component';
+import { ClosingCeremony3Component } from './closing-ceremony3/closing-ceremony3.component';
 
 @NgModule({
   imports: [
@@ -20,6 +22,8 @@ import { ClosingCeremonyComponent } from './closing-ceremony/closing-ceremony.co
     BrowserAnimationsModule,
     RouterModule.forRoot([
       { path: '', component: ClosingCeremonyComponent },
+      { path: 'closing2', component: ClosingCeremony2Component },
+      { path: 'closing3', component: ClosingCeremony3Component },
       { path: 'examples', component: ExamplesComponent },
     ]),
   ],
@@ -28,6 +32,8 @@ import { ClosingCeremonyComponent } from './closing-ceremony/closing-ceremony.co
     DialogContentComponent,
     ExamplesComponent,
     ClosingCeremonyComponent,
+    ClosingCeremony2Component,
+    ClosingCeremony3Component,
   ],
   entryComponents: [DialogContentComponent],
   bootstrap: [AppComponent],
