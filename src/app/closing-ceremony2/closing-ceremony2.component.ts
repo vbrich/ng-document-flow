@@ -38,11 +38,11 @@ export class ClosingCeremony2Component implements OnInit {
   @ViewChild('dialogRef99')
   dialogRef99!: TemplateRef<any>;
 
-  openTempDialog(num) {    
-    if (num == 1) { const myTempDialog = this.dialog.open(this.dialogRef1, {}); } 
-    else if (num == 2) {const myTempDialog = this.dialog.open(this.dialogRef2, {});}
-    else if (num == 3) {const myTempDialog = this.dialog.open(this.dialogRef3, {});}
-    else { const myTempDialog = this.dialog.open(this.dialogRef99, {}); }    
+  openOverviewDialog(num) {    
+    if (num == 1) { const myOverviewDialog = this.dialog.open(this.dialogRef1, {}); } 
+    else if (num == 2) {const myOverviewDialog = this.dialog.open(this.dialogRef2, {});}
+    else if (num == 3) {const myOverviewDialog = this.dialog.open(this.dialogRef3, {});}
+    else { const myOverviewDialog = this.dialog.open(this.dialogRef99, {}); }    
   }
 
   openDoc(num) {    

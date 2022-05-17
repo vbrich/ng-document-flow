@@ -6,6 +6,9 @@
   border-bottom: 1px solid lightgray;
   color: #3c64b1;
   box-shadow: none;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 .body-card {
@@ -14,9 +17,20 @@
   box-shadow: none;
 }
 
+.left {
+    float: right;
+    vertical-align: text-top;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
 .right {
   float: right;
   vertical-align: text-top;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 .main {
