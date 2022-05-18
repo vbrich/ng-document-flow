@@ -8,19 +8,19 @@ export interface Document {
 }
 
 const DOCUMENT1: Document[] = [
-  {id: 1, name: 'Federal Truth in Lending', desc: '4 Signatures 12 Pages'}
+  { id: 1, name: 'Federal Truth in Lending', desc: '4 Signatures 12 Pages' },
 ];
 const DOCUMENT2: Document[] = [
-  {id: 2, name: 'Credit Score Summary', desc: '0 Signatures 1 Page'}
+  { id: 2, name: 'Credit Score Summary', desc: '0 Signatures 1 Page' },
 ];
 const DOCUMENT3: Document[] = [
-  {id: 3, name: 'Odometer Statement', desc: '0 Signatures 1 Page'}
+  { id: 3, name: 'Odometer Disclosure', desc: '0 Signatures 1 Page' },
 ];
 
 @Component({
   selector: 'app-closing-ceremony2',
   templateUrl: './closing-ceremony2.component.html',
-  styleUrls: ['./closing-ceremony2.component.css']
+  styleUrls: ['./closing-ceremony2.component.css'],
 })
 export class ClosingCeremony2Component implements OnInit {
   displayedColumns: string[] = ['id', 'name'];
@@ -41,40 +41,56 @@ export class ClosingCeremony2Component implements OnInit {
   @ViewChild('docDialogRef1')
   docDialogRef1!: TemplateRef<any>;
 
-  openOverviewDialog(num) {    
-    if (num == 1) { const myOverviewDialog = this.dialog.open(this.dialogRef1, {}); } 
-    else if (num == 2) {const myOverviewDialog = this.dialog.open(this.dialogRef2, {});}
-    else if (num == 3) {const myOverviewDialog = this.dialog.open(this.dialogRef3, {});}
-    else { const myOverviewDialog = this.dialog.open(this.dialogRef99, {}); }    
+  openOverviewDialog(num) {
+    if (num == 1) {
+      const myOverviewDialog = this.dialog.open(this.dialogRef1, {});
+    } else if (num == 2) {
+      const myOverviewDialog = this.dialog.open(this.dialogRef2, {});
+    } else if (num == 3) {
+      const myOverviewDialog = this.dialog.open(this.dialogRef3, {});
+    } else {
+      const myOverviewDialog = this.dialog.open(this.dialogRef99, {});
+    }
   }
 
   // TEMP: Opening dialog fullscreen to preview HTML
   openDocDialog(num) {
-    const dialogRef = this.dialog.open(DialogContentDocument1, {
-      maxWidth: '100vw',
-      maxHeight: '100vh',
-      height: '100%',
-      width: '100%'
-    }); 
-    //const dialogRef = this.dialog.open(DialogContentExampleDialog); 
+    if (num == 1) {
+      const dialogRef = this.dialog.open(DialogContentDocument1, {
+        maxWidth: '100vw',
+        maxHeight: '100vh',
+        height: '100%',
+        width: '100%',
+      });
+    } else if (num == 2) {
+      const dialogRef = this.dialog.open(DialogContentDocument2, {
+        maxWidth: '100vw',
+        maxHeight: '100vh',
+        height: '100%',
+        width: '100%',
+      });
+    } else {
+      const dialogRef = this.dialog.open(DialogContentExampleDialog);
+    }
   }
 
   //TEMP: Open html files as new tabs. Yuck
-  openDoc(num) {    
+  openDoc(num) {
     console.log('openDoc() was hit with num = ' + num);
-    if (num == 1) { window.open('/assets/html/creditscoresummary.html', '_blank') } 
-    else if (num == 2) { window.open('/assets/html/creditscoresummary.html', '_blank') }
-    else if (num == 3) { window.open('/assets/html/odometer.html', '_blank') }
-    else { 
+    if (num == 1) {
+      window.open('/assets/html/creditscoresummary.html', '_blank');
+    } else if (num == 2) {
+      window.open('/assets/html/creditscoresummary.html', '_blank');
+    } else if (num == 3) {
+      window.open('/assets/html/odometer.html', '_blank');
+    } else {
       console.log('invalid number passed into openDoc()');
-    }    
+    }
   }
 
-  constructor(public dialog: MatDialog) {
-  }
+  constructor(public dialog: MatDialog) {}
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 }
 
 @Component({
@@ -88,3 +104,9 @@ export class DialogContentExampleDialog {}
   templateUrl: 'dialog-content-document-1.html',
 })
 export class DialogContentDocument1 {}
+
+@Component({
+  selector: 'dialog-content-document-2',
+  templateUrl: 'dialog-content-document-2.html',
+})
+export class DialogContentDocument2 {}

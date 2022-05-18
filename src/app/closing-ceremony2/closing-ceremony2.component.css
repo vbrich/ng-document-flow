@@ -86,6 +86,16 @@
   text-align: center;
 }
 
+.modal-icon {
+  padding: 0px;
+  text-align: right;
+}
+
+.modal-footer {
+  padding: 0px;
+  text-align: center;
+}
+
 table {
   width: 100%;
 }
