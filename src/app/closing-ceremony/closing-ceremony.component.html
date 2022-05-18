@@ -46,25 +46,29 @@
 
       <div class="container">
         <div class="center">
-          <button
+
+          <button 
             mat-button
-            class="app-button"
-            mat-raised-button
-            color="primary"
-            [routerLink]="['/closing2']"
+            mat-mini-fab 
+            color="nothing"
+            [routerLink]="['/closing2b']"
+            matTooltip="Option 1" 
           >
-            Preview Contracts
+            <mat-icon>arrow_right</mat-icon>          
           </button>
 
-          <button
+          &nbsp;&nbsp;
+
+          <button 
             mat-button
-            class="app-button"
-            mat-raised-button
-            color="accent"
-            [routerLink]="['/closing2b']"
+            mat-mini-fab 
+            color="primary"
+            [routerLink]="['/closing2']"
+            matTooltip="Option 2" 
           >
-            Preview Contracts
+            <mat-icon>arrow_right</mat-icon>          
           </button>
+
         </div>
       </div>
     </div>
