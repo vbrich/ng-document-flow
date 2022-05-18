@@ -48,11 +48,16 @@ export class ClosingCeremony2Component implements OnInit {
     else { const myOverviewDialog = this.dialog.open(this.dialogRef99, {}); }    
   }
 
+  //TODO: Remove this failed shit. Just trying to open HTML in a dialog but we need all real estate
   openDocDialog(num) {
-    if (num == 2) { const dialogRef = this.dialog.open(DialogContentDocument1); }
-    else { const dialogRef = this.dialog.open(DialogContentExampleDialog); }
+    const dialogRef = this.dialog.open(DialogContentDocument1, {
+      height: '80%',
+      width: '100%'
+    }); 
+    //const dialogRef = this.dialog.open(DialogContentExampleDialog); 
   }
 
+  //TODO: Still pending decision. This opens documents as new tabs. Don't like it...
   openDoc(num) {    
     console.log('openDoc() was hit with num = ' + num);
     if (num == 1) { window.open('/assets/html/creditscoresummary.html', '_blank') } 
