@@ -1,22 +1,36 @@
+<h2>My Awesome Table:</h2>
+
+<table *ngIf="dataFromServer">
+  <tr>
+    <th>ID</th>
+    <th>Name</th>
+    <th>Username</th>
+    <th>Email</th>
+  </tr>
+  <tr *ngFor="let data of dataFromServer">
+    <td>{{ data.id }}</td>
+    <td>{{ data.name }}</td>
+    <td>{{ data.username }}</td>
+    <td>{{ data.email }}</td>
+  </tr>
+</table>
+
 <div style="text-align: center">
   <br /><br />
-
- <!-- https://docusign-service.ribo916.repl.co/getlink -->
-
   <iframe
-  width="100%"
-  height="700"
-  src="https://demo.docusign.net/Signing/MTRedeem/v1/46a3abdd-5bf9-4a83-89ed-27eb4c3b8e4a?slt=eyJ0eXAiOiJNVCIsImFsZyI6IlJTMjU2Iiwia2lkIjoiNjgxODVmZjEtNGU1MS00Y2U5LWFmMWMtNjg5ODEyMjAzMzE3In0.AQYAAAABAAMABwAAgfPciDjaSAgAACEFZKo42kgYAAEAAAAAAAAAIQC9AgAAeyJUb2tlbklkIjoiYzMyZjkwZDAtOGYyMy00MzZhLWFlNTctN2Q1MDgxZGRkZjAxIiwiRXhwaXJhdGlvbiI6IjIwMjItMDUtMThUMDQ6NDc6NDkrMDA6MDAiLCJJc3N1ZWRBdCI6IjIwMjItMDUtMThUMDQ6NDI6NTAuMDUzMDIzMSswMDowMCIsIlJlc291cmNlSWQiOiI2ZGY2ZGQ4ZS0yZTkyLTRjNzMtYWY4Yy0wNTdlNDhhNjM5NzEiLCJSZXNvdXJjZXMiOiJ7XCJFbnZlbG9wZUlkXCI6XCI2ZGY2ZGQ4ZS0yZTkyLTRjNzMtYWY4Yy0wNTdlNDhhNjM5NzFcIixcIkFjdG9yVXNlcklkXCI6XCIxYTZjMjRiZi04NzcxLTQ0YjgtODk4NC1jMzJjZDg5MDljYTlcIixcIlJlY2lwaWVudElkXCI6XCJmZmJmZDRhMC01MWU5LTQ0ZjQtOGZmYy0zMzEzMWViNjNjNWVcIixcIkZha2VRdWVyeVN0cmluZ1wiOlwidD0xZjA3ZDg3YS1hNGI2LTQ2N2MtYTMxOS1iYTdmYTFjYjc2YjFcIixcIkludGVncmF0b3JLZXlcIjpcIjE4YTRjNzI5LThhZTEtNGNiNy1hZDMzLTljZjUyNzU3NmJmYlwifSIsIlRva2VuVHlwZSI6MSwiQXVkaWVuY2UiOiIyNWUwOTM5OC0wMzQ0LTQ5MGMtOGU1My0zYWIyY2E1NjI3YmYiLCJSZWRpcmVjdFVyaSI6Imh0dHBzOi8vZGVtby5kb2N1c2lnbi5uZXQvU2lnbmluZy9TdGFydEluU2Vzc2lvbi5hc3B4IiwiSGFzaEFsZ29yaXRobSI6MCwiSGFzaFJvdW5kcyI6MCwiVG9rZW5TdGF0dXMiOjAsIklzU2luZ2xlVXNlIjpmYWxzZX0_AACyko6JONpI.wrfpa7gcvcRQSXo-1Lh-sisQmYrZypLXrRvPay6XwCHmDste8kC1Wkw-JRWpr0XxwKHbKlPSfB2se7ouq4H6eEsqJOCEmZXBnMd95gHFOecQa7fLRPztWfmnNr4KRTZj5FWfRNtXrxAAN-sgkIU7rw6WzECL0hOx-6xAAZ-j2Y1kERk2I7OeVx2AFqMbvDtoYIYhqBc5DMiy5a0Ag5Koqf0d-ax_13kIJcOM2LxpkHd8kxjKn5BGjI0et9wVBQ2UZTq00QmnmrbWijMeDj-46fqLhBovNRXjqzTBax1pturN37azC_KHzkSde9rNvNjPunI-5QBk3_MBs4s1l2es0g"
-></iframe>
-  
+    width="100%"
+    height="700"
+    [src]="signinglink | safe: 'resourceUrl'"
+  ></iframe>
   <br /><br />
-  <button
-    mat-button
-    class="app-button"
-    mat-raised-button
-    color="primary"
-    [routerLink]="['/closing2']"
-  >
-    Back
+  <button mat-button mat-mini-fab color="nothing" [routerLink]="['/closing2']">
+    <mat-icon>arrow_left</mat-icon>
   </button>
 </div>
+
+<!--
+<div class="pic bg-pic" [style.background-image]="'url(' + pictureUrl + ')' | safe: 'style'"></div>
+    <img class="pic" [src]="pictureUrl | safe: 'url'" alt="A Cat">
+    <iframe width="640" height="390" [src]="catVideoEmbed | safe: 'resourceUrl'"></iframe>
+    <pre [innerHTML]="htmlContent | safe: 'html'"></pre>
+-->

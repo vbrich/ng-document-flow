@@ -218,25 +218,27 @@
       <br />
       <div class="docs">
         <div style="text-align: center">
-          <button
-            mat-button
-            class="app-button"
-            mat-raised-button
-            color="primary"
-            [routerLink]="['/']"
-          >
-            Back
-          </button>
 
-          <button
-            mat-button
-            class="app-button"
-            mat-raised-button
-            color="primary"
-            [routerLink]="['/closing3']"
-          >
-            Sign
-          </button>
+          <button 
+          mat-button
+          mat-mini-fab 
+          color="nothing"
+          [routerLink]="['/closing']"            
+        >
+          <mat-icon>arrow_left</mat-icon>          
+        </button>
+      
+        &nbsp;&nbsp;
+      
+        <button 
+          mat-button
+          mat-mini-fab 
+          color="primary"
+          [routerLink]="['/closing3']"            
+        >
+          <mat-icon>arrow_right</mat-icon>          
+        </button>
+
         </div>
       </div>
     </div>

@@ -1,0 +1,78 @@
+<mat-card class="top-card">
+<div class="left">
+  <mat-icon class="example-icon">keyboard_arrow_left</mat-icon>
+  <span>Back</span>
+</div>
+<div class="right">
+  <mat-icon class="example-icon">edit_note</mat-icon>
+  <span>My Deal</span>
+</div>
+</mat-card>
+
+<mat-card class="body-card">
+<mat-card-content>
+  <div class="main">
+    <h2>Loan Summary</h2>
+    <b>CSI Warranted Transaction</b><br />
+    <b>Basic Information</b><br /><br />
+    Time Stamp: <b>22:04:59 MONDAY, OCTOBER 5, 2023</b><br />
+    Type of Loan: <b>AUTO</b><br />
+    Status: <b>CLOSING-APPROVED</b><br />
+
+    <br />
+    <div class="amount-block">
+      Principal Amount: <b>$10,000.00</b><br /><br />
+      <hr style="border-top: 1px solid #3d8cb1;" />
+      <div class="grid-container">
+        <div class="grid-item1">Back</div>
+        <div class="grid-item2"></div>
+        <div class="grid-item3">Next</div>
+      </div>
+      <hr style="border-top: 1px solid #3d8cb1;" />
+    </div>
+
+    <br />
+
+    Term: <b>60 MONTHS</b><br />
+    Secured: <b>YES</b><br />
+    Number of Borrowers: <b>1</b><br />
+    Number of Cosigners: <b>NONE</b><br />
+    Number of Guarantors: <b>NONE</b><br />
+    Number of Hypothecators: <b>NONE</b><br />
+    Number of Units of Collateral: <b>1</b><br />
+    ...<br />
+
+    <br /><br />
+
+    <div class="container">
+      <div class="center">
+
+        <button 
+          mat-button
+          mat-mini-fab 
+          color="nothing"
+          [routerLink]="['/']"
+          matTooltip="Option 1" 
+        >
+          <mat-icon>arrow_left</mat-icon>          
+        </button>
+
+        &nbsp;&nbsp;
+
+        <button 
+          mat-button
+          mat-mini-fab 
+          color="primary"
+          [routerLink]="['/closing2b']"
+          matTooltip="Option 2" 
+        >
+          <mat-icon>arrow_right</mat-icon>          
+        </button>
+
+      </div>
+    </div>
+  </div>
+  <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+  <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+</mat-card-content>
+</mat-card>
