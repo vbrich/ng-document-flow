@@ -12,6 +12,10 @@
   justify-content: space-between;
 }
 
+.hrline {
+  border-top: 1px solid#C7C7C3;
+}
+
 .body-card {
   padding: 10px;
   border-radius: 0;
